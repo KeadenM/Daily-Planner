@@ -43,6 +43,15 @@ if (scheduleHour < time) {
     $(this).addClass('future');
   }
 
-})
+var parentDivID = $(this).attr("id");
+
+var textarea = $(this).find("textarea");
+
+var savedSchedule = localStorage.getItem(parentDivID);
+
+if (savedSchedule !== null) {
+  textarea.area.val(savedSchedule);
+}
+});
 
 });
