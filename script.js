@@ -35,6 +35,14 @@ if (scheduleAMPM === "PM" && scheduleHour !==12) {
   scheduleHour = 0
 }
 
+if (scheduleHour < time) {
+  $(this).addClass('past');
+  } else if (scheduleHour === time){
+    $(this).addClass('present');
+  } else {
+    $(this).addClass('future');
+  }
+
 })
 
 });
